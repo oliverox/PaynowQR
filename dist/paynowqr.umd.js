@@ -111,7 +111,7 @@
 	        id: '26', value:                            // ID 26: Merchant Account Info Template
 	          [{ id: '00', value: 'SG.PAYNOW' },
 	          { id: '01', value: opts.type ? String(opts.type) : '2' },                 // 0 for mobile, 2 for UEN. 1 is not used.
-	          { id: '02', value: String(opts.uen) },            // PayNow UEN (Company Unique Entity Number)
+	          { id: '02', value: String(opts.value) },            // PayNow UEN or Mobile number
 	          { id: '03', value: String(! opts.amount ||opts.editable ? 1 : 0) },       // 1 = Payment amount is editable, 0 = Not Editable
 	          { id: '04', value: String(opts.expiry|| dayjs_min().add(5,"year").format('YYYYMMDD') )}]         // Expiry date (YYYYMMDD)
 	      },
